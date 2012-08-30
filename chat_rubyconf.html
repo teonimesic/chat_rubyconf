@@ -1,0 +1,19 @@
+<head>
+  <title>chat_rubyconf</title>
+</head>
+
+<body>
+  {{> chat}}
+</body>
+
+<template name="chat">
+  <h1>Deixem suas mensagens</h1>
+  <form id="chat">
+    <input type="text" name="text" id="text" />
+    <input type="submit" value="enviar" />
+  </form>
+
+  {{#each messages}}
+    <p>{{text}}</p>
+  {{/each}}
+</template>
